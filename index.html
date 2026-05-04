@@ -1,28 +1,886 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Takane Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Takane Academy — Empowering South African youth through education, skills development, and community upliftment." />
+  <title>Takane Academy | Empowering Youth Through Education</title>
+  <link rel="stylesheet" href="style2.css" />
+  <!-- Google Fonts preloaded in CSS via @import -->
 </head>
 <body>
 
-    <header class="hero">
-        <h1>Takane Website</h1>
-        <p>Creative portfolio & personal space</p>
-        <a href="#about" class="button">Explore</a>
-    </header>
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>This is my new website where I showcase my projects, skills, and creativity.</p>
-    </section>
+    <a href="#home" class="nav-logo">
+      <div class="logo-mark">T</div>
+      <div class="logo-text">
+        <span class="name">Takane Academy</span>
+        <span class="tagline">South Africa · Est. 2015</span>
+      </div>
+    </a>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Coming soon...</p>
-    </section>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="#get-involved" class="btn btn-outline" style="padding:10px 22px;">Volunteer</a>
+      <a href="#get-involved" class="btn btn-primary" style="padding:10px 22px;">Donate Now</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Mobile Navigation -->
+<div class="nav-mobile" id="navMobile">
+  <button class="nav-mobile-close" id="navClose" aria-label="Close menu">✕</button>
+  <a href="#about"       onclick="closeMenu()">About</a>
+  <a href="#programs"    onclick="closeMenu()">Programs</a>
+  <a href="#impact"      onclick="closeMenu()">Impact</a>
+  <a href="#team"        onclick="closeMenu()">Team</a>
+  <a href="#news"        onclick="closeMenu()">News</a>
+  <a href="#contact"     onclick="closeMenu()">Contact</a>
+  <a href="#get-involved" class="btn btn-primary" onclick="closeMenu()" style="margin-top:16px;">Donate Now</a>
+</div>
+
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-geo hero-geo-1"></div>
+  <div class="hero-geo hero-geo-2"></div>
+
+  <div class="container">
+
+    <!-- Left: Content -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        Registered South African NPO
+      </div>
+
+      <h1 class="hero-title">
+        Shaping<br>
+        <span class="accent">Futures</span><br>
+        <span class="line-italic">One Student at a Time</span>
+      </h1>
+
+      <p class="hero-description">
+        Takane Academy is a nonprofit organisation committed to unlocking the
+        potential of South African youth through quality education, skills
+        development, and holistic community support.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#programs" class="btn btn-primary">
+          Explore Our Programs
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#impact" class="btn btn-outline">See Our Impact</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" data-target="1200">0</div>
+          <div class="stat-label">Students Reached</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="8">0</div>
+          <div class="stat-label">Provinces Active</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="94">0</div>
+          <div class="stat-label">% Pass Rate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="hero-visual">
+      <div class="hero-image-card">
+        <div class="hero-image-placeholder">
+          <!-- Replace with: <img src="images/hero.jpg" alt="Students at Takane Academy"> -->
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>Hero Image · 800 × 1000</span>
+        </div>
+      </div>
+
+      <!-- Floating Badge -->
+      <div class="hero-badge">
+        <div class="badge-icon">🎓</div>
+        <div class="badge-text">
+          <div class="val">NPO Verified</div>
+          <div class="sub">Dept. of Social Dev.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     MISSION STRIP
+     ============================================================ -->
+<div class="mission-strip">
+  <div class="container">
+    <div class="strip-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Education for All
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Community First
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      10+ Years of Service
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Based in South Africa
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Measurable Impact
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="about section" id="about">
+  <div class="container">
+
+    <!-- Visual -->
+    <div class="about-visual reveal">
+      <div class="about-img-grid">
+        <div class="about-img-box tall">
+          <!-- <img src="images/about-1.jpg" alt="Students learning"> -->
+          Photo 1
+        </div>
+        <div class="about-img-box">
+          <!-- <img src="images/about-2.jpg" alt="Classroom"> -->
+          Photo 2
+        </div>
+        <div class="about-img-box">
+          <!-- <img src="images/about-3.jpg" alt="Community"> -->
+          Photo 3
+        </div>
+      </div>
+      <div class="about-accent-card">
+        <div class="big">2015</div>
+        <div class="sm">Year Founded in South Africa</div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="about-content reveal reveal-delay-2">
+      <div class="section-tag">Who We Are</div>
+      <h2 class="section-title">Education Is the Most Powerful Weapon</h2>
+      <p class="about-body">
+        Takane Academy was born from a simple belief: every South African child deserves
+        access to quality education regardless of their socioeconomic background.
+        Since 2015, we have been breaking barriers, building bridges, and nurturing the
+        next generation of leaders, innovators, and change-makers.
+      </p>
+      <p class="about-body" style="margin-top:-16px;">
+        We work hand-in-hand with schools, families, and local government to create
+        sustainable, community-led educational ecosystems across South Africa.
+      </p>
+
+      <div class="value-list">
+        <div class="value-item">
+          <div class="value-dot"></div>
+          <p><strong>Inclusivity:</strong> We reach learners in underserved urban and rural communities.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-dot"></div>
+          <p><strong>Excellence:</strong> We hold ourselves and our students to the highest standards.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-dot"></div>
+          <p><strong>Ubuntu:</strong> We believe in the power of community and collective growth.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="#programs" class="btn btn-primary">Our Programs</a>
+        <a href="#contact" class="btn btn-outline">Partner With Us</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PROGRAMS
+     ============================================================ -->
+<section class="section" id="programs">
+  <div class="container">
+
+    <div style="text-align:center;max-width:600px;margin:0 auto 8px;">
+      <div class="section-tag">What We Do</div>
+      <h2 class="section-title">Programs Designed to Transform</h2>
+      <p class="section-subtitle" style="margin:0 auto;">
+        Our programs address education holistically — from academic support to
+        life skills, mental wellness, and digital readiness.
+      </p>
+    </div>
+
+    <div class="programs-grid">
+
+      <div class="program-card reveal">
+        <div class="program-icon">📚</div>
+        <div class="program-title">Academic Support</div>
+        <p class="program-desc">
+          Targeted tutoring, mentorship, and curriculum support for Grades 8–12
+          in Maths, Science, and English to boost pass rates and university access.
+        </p>
+        <span class="program-tag">Core Program</span>
+      </div>
+
+      <div class="program-card reveal reveal-delay-1">
+        <div class="program-icon">💻</div>
+        <div class="program-title">Digital Skills</div>
+        <p class="program-desc">
+          Coding bootcamps, digital literacy workshops, and technology access
+          initiatives bridging the digital divide for township youth.
+        </p>
+        <span class="program-tag">Technology</span>
+      </div>
+
+      <div class="program-card reveal reveal-delay-2">
+        <div class="program-icon">🌱</div>
+        <div class="program-title">Youth Leadership</div>
+        <p class="program-desc">
+          Leadership camps, civic education, and entrepreneurship training to
+          cultivate confident, responsible community leaders of tomorrow.
+        </p>
+        <span class="program-tag">Leadership</span>
+      </div>
+
+      <div class="program-card reveal reveal-delay-1">
+        <div class="program-icon">🎨</div>
+        <div class="program-title">Arts & Culture</div>
+        <p class="program-desc">
+          Music, drama, and visual arts programs that celebrate African heritage
+          while building creativity, confidence, and emotional intelligence.
+        </p>
+        <span class="program-tag">Creative Arts</span>
+      </div>
+
+      <div class="program-card reveal reveal-delay-2">
+        <div class="program-icon">🧠</div>
+        <div class="program-title">Wellness & Counselling</div>
+        <p class="program-desc">
+          On-site psychosocial support, group therapy sessions, and wellness
+          workshops ensuring students thrive mentally and emotionally.
+        </p>
+        <span class="program-tag">Wellbeing</span>
+      </div>
+
+      <div class="program-card reveal reveal-delay-3">
+        <div class="program-icon">🤝</div>
+        <div class="program-title">Bursary &amp; Funding</div>
+        <p class="program-desc">
+          Connecting deserving students with bursaries, university application
+          support, and financial aid to make tertiary education a reality.
+        </p>
+        <span class="program-tag">Funding</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     IMPACT
+     ============================================================ -->
+<section class="impact section" id="impact">
+  <div class="impact-bg"></div>
+  <div class="container">
+
+    <div class="impact-header reveal">
+      <div class="section-tag">Our Impact</div>
+      <h2 class="section-title">Numbers That Speak</h2>
+      <p class="section-subtitle">
+        Every number represents a life changed, a barrier broken, a future unlocked.
+        Here's what we've achieved together.
+      </p>
+    </div>
+
+    <div class="impact-grid reveal">
+      <div class="impact-stat">
+        <div class="impact-number" data-target="1200">0</div>
+        <div class="impact-label">Students<br>Supported</div>
+      </div>
+      <div class="impact-stat">
+        <div class="impact-number" data-target="94">0<span style="font-size:1.4rem">%</span></div>
+        <div class="impact-label">Matric<br>Pass Rate</div>
+      </div>
+      <div class="impact-stat">
+        <div class="impact-number" data-target="48">0</div>
+        <div class="impact-label">Partner<br>Schools</div>
+      </div>
+      <div class="impact-stat">
+        <div class="impact-number" data-target="320">0</div>
+        <div class="impact-label">University<br>Placements</div>
+      </div>
+    </div>
+
+    <div class="impact-testimonial reveal reveal-delay-2">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">
+        Takane Academy didn't just help me pass Matric — they helped me believe I
+        could go to university. Today I'm studying Engineering at Wits, and it
+        started with one tutor who believed in me.
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar"></div>
+        <div class="author-info">
+          <div class="name">Lerato Dlamini</div>
+          <div class="role">Alumni · Engineering Student, University of the Witwatersrand</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     TEAM
+     ============================================================ -->
+<section class="section" id="team">
+  <div class="container">
+
+    <div class="team-header">
+      <div>
+        <div class="section-tag">Meet The Team</div>
+        <h2 class="section-title">People Behind the Mission</h2>
+      </div>
+      <a href="#contact" class="btn btn-ghost">
+        Join Our Team <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="team-grid">
+
+      <div class="team-card reveal">
+        <div class="team-photo">
+          <!-- <img src="images/team-1.jpg" alt="Director"> -->
+          Photo
+        </div>
+        <div class="team-info">
+          <div class="team-name">Nomsa Khumalo</div>
+          <div class="team-role">Executive Director</div>
+          <p class="team-bio">20+ years in education and community development. Former HOD at Soweto High School.</p>
+        </div>
+      </div>
+
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-photo">Photo</div>
+        <div class="team-info">
+          <div class="team-name">Sipho Ndlovu</div>
+          <div class="team-role">Programs Manager</div>
+          <p class="team-bio">Curriculum designer and youth advocate. Master's in Education Policy from UCT.</p>
+        </div>
+      </div>
+
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-photo">Photo</div>
+        <div class="team-info">
+          <div class="team-name">Aisha Petersen</div>
+          <div class="team-role">Head of Partnerships</div>
+          <p class="team-bio">Connects Takane Academy with funders, corporates, and government stakeholders.</p>
+        </div>
+      </div>
+
+      <div class="team-card reveal reveal-delay-3">
+        <div class="team-photo">Photo</div>
+        <div class="team-info">
+          <div class="team-name">Thabo Mokoena</div>
+          <div class="team-role">Digital Skills Lead</div>
+          <p class="team-bio">Tech educator and coder passionate about closing the digital divide in townships.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     GET INVOLVED / DONATE
+     ============================================================ -->
+<section class="get-involved section" id="get-involved">
+  <div class="container">
+
+    <div style="text-align:center;max-width:580px;margin:0 auto 8px;">
+      <div class="section-tag">Take Action</div>
+      <h2 class="section-title">Be Part of the Change</h2>
+      <p class="section-subtitle" style="margin:0 auto;">
+        Whether you give your time or your resources, your contribution directly
+        transforms a young South African's life.
+      </p>
+    </div>
+
+    <div class="involved-grid">
+
+      <!-- Donate -->
+      <div class="involved-card primary reveal">
+        <div class="involved-icon">💛</div>
+        <h3 class="involved-title">Make a Donation</h3>
+        <p class="involved-desc">
+          Your donation funds textbooks, tutoring sessions, digital devices,
+          and bursaries for students who need it most.
+        </p>
+
+        <div class="donate-tiers">
+          <button class="tier-btn active" onclick="setTier(this)">R100</button>
+          <button class="tier-btn" onclick="setTier(this)">R250</button>
+          <button class="tier-btn" onclick="setTier(this)">R500</button>
+          <button class="tier-btn" onclick="setTier(this)">Custom</button>
+        </div>
+
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">
+          Donate Securely
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Volunteer -->
+      <div class="involved-card secondary reveal reveal-delay-2">
+        <div class="involved-icon">🙌</div>
+        <h3 class="involved-title">Volunteer With Us</h3>
+        <p class="involved-desc">
+          Share your skills and time as a tutor, mentor, facilitator, or
+          event volunteer. Every hour creates real impact.
+        </p>
+
+        <div class="volunteer-perks">
+          <div class="perk-item">
+            <div class="perk-check">✓</div>
+            Flexible hours — weekday or weekend
+          </div>
+          <div class="perk-item">
+            <div class="perk-check">✓</div>
+            Training and onboarding provided
+          </div>
+          <div class="perk-item">
+            <div class="perk-check">✓</div>
+            Certificate of service issued
+          </div>
+          <div class="perk-item">
+            <div class="perk-check">✓</div>
+            Remote and in-person options
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">
+          Apply to Volunteer
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     NEWS
+     ============================================================ -->
+<section class="news section" id="news">
+  <div class="container">
+
+    <div class="news-header">
+      <div>
+        <div class="section-tag">Latest News</div>
+        <h2 class="section-title">Stories of Change</h2>
+      </div>
+      <a href="#" class="btn btn-ghost">All Articles <span class="arrow">→</span></a>
+    </div>
+
+    <div class="news-grid">
+
+      <div class="news-card featured reveal">
+        <div class="news-thumb">
+          <!-- <img src="images/news-1.jpg" alt="News"> -->
+          Featured Image · 800 × 500
+        </div>
+        <div class="news-body">
+          <div class="news-meta">
+            <span class="news-cat">Milestone</span>
+            <span class="news-date">12 April 2025</span>
+          </div>
+          <h3 class="news-title">Takane Academy Reaches 1,200 Students — A Decade of Impact in South Africa</h3>
+          <p class="news-excerpt">
+            A decade after our founding, we've crossed a landmark milestone.
+            Here's how our community came together to make it happen — and what comes next.
+          </p>
+          <a href="#" class="btn btn-ghost">Read More <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="news-card reveal reveal-delay-1">
+        <div class="news-thumb">
+          <!-- <img src="images/news-2.jpg" alt="News"> -->
+          Image · 400 × 225
+        </div>
+        <div class="news-body">
+          <div class="news-meta">
+            <span class="news-cat">Programs</span>
+            <span class="news-date">3 March 2025</span>
+          </div>
+          <h3 class="news-title">New Coding Bootcamp Launches in Soweto</h3>
+          <p class="news-excerpt">60 students enrolled in our newest 12-week digital skills cohort.</p>
+          <a href="#" class="btn btn-ghost">Read More <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="news-card reveal reveal-delay-2">
+        <div class="news-thumb">
+          <!-- <img src="images/news-3.jpg" alt="News"> -->
+          Image · 400 × 225
+        </div>
+        <div class="news-body">
+          <div class="news-meta">
+            <span class="news-cat">Community</span>
+            <span class="news-date">18 Jan 2025</span>
+          </div>
+          <h3 class="news-title">Partnership With Eskom Foundation Brings 200 Bursaries</h3>
+          <p class="news-excerpt">A landmark agreement will fund university placements for top matriculants.</p>
+          <a href="#" class="btn btn-ghost">Read More <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PARTNERS
+     ============================================================ -->
+<section class="partners">
+  <div class="container">
+    <p class="partners-title">Trusted Partners &amp; Funders</p>
+    <div class="partners-logos">
+      <div class="partner-logo">Eskom Foundation</div>
+      <div class="partner-logo">NSFAS</div>
+      <div class="partner-logo">Dept. of Education</div>
+      <div class="partner-logo">Old Mutual</div>
+      <div class="partner-logo">Investec</div>
+      <div class="partner-logo">UNICEF SA</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section class="contact section" id="contact">
+  <div class="container">
+
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Let's Build Something Together</h2>
+
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="contact-info reveal">
+        <p class="contact-body">
+          Whether you're a funder, a school, a corporate partner, or an individual
+          wanting to volunteer — we'd love to hear from you. Reach out and let's
+          create lasting change together.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <div class="label">Address</div>
+              <div class="val">123 Ubuntu Street, Johannesburg, Gauteng, 2000</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-text">
+              <div class="label">Phone</div>
+              <div class="val">+27 11 000 1234</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-text">
+              <div class="label">Email</div>
+              <div class="val">info@takaneacademy.org.za</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div class="contact-item-text">
+              <div class="label">Office Hours</div>
+              <div class="val">Mon – Fri, 08:00 – 17:00 SAST</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form reveal reveal-delay-2">
+        <h3 class="form-title">Send Us a Message</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Lerato" />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Dlamini" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="lerato@example.co.za" />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">I'm interested in</label>
+          <select id="subject">
+            <option value="">Select an option…</option>
+            <option>Making a Donation</option>
+            <option>Volunteering</option>
+            <option>Corporate Partnership</option>
+            <option>Enrolling a Student</option>
+            <option>Media & Press</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" rows="4" placeholder="Tell us how you'd like to get involved…"></textarea>
+        </div>
+
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="handleFormSubmit(event)">
+          Send Message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+        </button>
+
+        <p style="margin-top:14px;font-size:0.78rem;color:var(--clr-muted);text-align:center;">
+          We respond within 2 business days. Your data is never shared.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <div class="logo-mark">T</div>
+          <div class="logo-text">
+            <span class="name">Takane Academy</span>
+            <span class="tagline">NPO · South Africa</span>
+          </div>
+        </a>
+        <p>
+          Empowering South African youth through education, opportunity,
+          and community. Registered NPO — Dept. of Social Development.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+
+      <!-- Col 1 -->
+      <div class="footer-col">
+        <h4>Organisation</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#impact">Impact Report</a></li>
+          <li><a href="#news">News &amp; Stories</a></li>
+          <li><a href="#">Annual Reports</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#programs">Academic Support</a></li>
+          <li><a href="#programs">Digital Skills</a></li>
+          <li><a href="#programs">Youth Leadership</a></li>
+          <li><a href="#programs">Arts &amp; Culture</a></li>
+          <li><a href="#programs">Bursaries</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="#get-involved">Donate</a></li>
+          <li><a href="#get-involved">Volunteer</a></li>
+          <li><a href="#contact">Partner With Us</a></li>
+          <li><a href="#contact">Corporate CSI</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.footer-top -->
+
+    <div class="footer-bottom">
+      <p>© 2025 Takane Academy. All rights reserved. | NPO Reg. No. 000/000/NPO</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+  /* ── Navbar scroll ── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  /* ── Mobile menu ── */
+  const hamburger  = document.getElementById('hamburger');
+  const navMobile  = document.getElementById('navMobile');
+  const navClose   = document.getElementById('navClose');
+
+  hamburger.addEventListener('click', () => navMobile.classList.add('open'));
+  navClose.addEventListener('click',  closeMenu);
+  function closeMenu() { navMobile.classList.remove('open'); }
+
+  /* ── Scroll reveal ── */
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer  = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  /* ── Counter animation ── */
+  function animateCounters(container) {
+    container.querySelectorAll('[data-target]').forEach(el => {
+      const target  = parseInt(el.getAttribute('data-target'));
+      const suffix  = el.innerHTML.includes('%') ? '%' : (el.innerHTML.includes('+') ? '+' : '');
+      const duration = 1800;
+      const step     = 16;
+      const increment = target / (duration / step);
+      let current = 0;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = Math.floor(current).toLocaleString() + suffix;
+      }, step);
+    });
+  }
+
+  /* Trigger counters when hero enters view */
+  const heroStats = document.querySelector('.hero-stats');
+  if (heroStats) {
+    const heroObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { animateCounters(heroStats); heroObs.unobserve(e.target); } });
+    }, { threshold: 0.4 });
+    heroObs.observe(heroStats);
+  }
+
+  const impactGrid = document.querySelector('.impact-grid');
+  if (impactGrid) {
+    const impactObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { animateCounters(impactGrid); impactObs.unobserve(e.target); } });
+    }, { threshold: 0.3 });
+    impactObs.observe(impactGrid);
+  }
+
+  /* ── Donate tier toggle ── */
+  function setTier(btn) {
+    document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  /* ── Form submit (placeholder) ── */
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const btn = e.target;
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = 'var(--clr-sage)';
+    setTimeout(() => {
+      btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>';
+      btn.style.background = '';
+    }, 3000);
+  }
+
+  /* ── Active nav link highlight on scroll ── */
+  const sections  = document.querySelectorAll('section[id], div[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+    });
+    navAnchors.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--clr-cream)' : '';
+    });
+  });
+</script>
 
 </body>
 </html>
